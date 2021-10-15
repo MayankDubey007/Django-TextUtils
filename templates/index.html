@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <title>DubeyTextUtils</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">DubeyTextUtils.Com</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About Us</a>
+                    </li>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contect Us</a>
+                    </li>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+    </nav>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>Wellcome To Text Utils</strong> You Can Do Anything With Your Text Here <button type="button"
+            class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    <form action="/analyze" method="get"> {% csrf_token %}
+        <div class="container">
+            <div class="mb-3">
+                <label for="exampleFormControlTextarea1" class="form-label">Enter your Text Here And Let Text Utils Do
+                    The Magic</label>
+                <textarea class="form-control" name="Pera" id="exampleFormControlTextarea1" rows="9"></textarea>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="Rpunc" type="checkbox" id="flexSwitchCheckDefault1">
+                <label class="form-check-label" for="flexSwitchCheckDefault1">REMOVE PUNCTUATIONS</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="Upper" type="checkbox" id="flexSwitchCheckDefault2">
+                <label class="form-check-label" for="flexSwitchCheckDefault2">UPPERCASE</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="Lower" type="checkbox" id="flexSwitchCheckDefault3">
+                <label class="form-check-label" for="flexSwitchCheckDefault3">LOWWERCASE</label>
+            </div>
+            <div class="form-check form-switch">
+                <input class="form-check-input" name="Rnewline" type="checkbox" id="flexSwitchCheckDefault3">
+                <label class="form-check-label" for="flexSwitchCheckDefault3">Remove New Line</label>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-dark">Analyze</button>
+            </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
